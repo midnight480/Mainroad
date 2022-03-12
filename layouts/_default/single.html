@@ -15,7 +15,10 @@
 		<div class="content post__content clearfix">
 			{{ .Content }}
 		</div>
-		{{- if .Params.tags }}
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-via="midnight480" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></article>
+			<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fmidnight480.com%2F&width=190&layout=button_count&action=like&size=small&share=true&height=46&appId" width="190" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+			{{ partial "share-buttons.html" . }}
+			{{- if .Params.tags }}
 		<footer class="post__footer">
 			{{ partial "post_tags.html" . }}
 		</footer>
