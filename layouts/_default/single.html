@@ -10,6 +10,8 @@
 			<div class="post__meta meta">{{ . }}</div>
 			{{- end }}
 		</header>
+		<i>読了時間（目安）： {{ .ReadingTime }} 分 {{ if (ne .ReadingTime 1) }}0秒{{ end }} </i><br>
+		<i>記事の文字数： {{ len .RawContent }} 文字</i>
 		{{ partial "post_thumbnail.html" (dict "class" "post" "page" .) }}
 		{{- partial "post_toc.html" . -}}
 		<div class="content post__content clearfix">
